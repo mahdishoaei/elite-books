@@ -5,11 +5,17 @@
     font-family: "shabnam";
 }
 
-.fa_rtl_design{
-    direction: rtl;
+.app-container{
+    padding: 20px 60px;
 }
 
-.ar_rtl_design{
+@media (max-width: 600px) {
+    .app-container{
+        padding: 20px 20px;
+    }
+}
+
+.fa_rtl_design{
     direction: rtl;
 }
 
@@ -34,21 +40,9 @@
     box-shadow: 0 1px 2px 0 rgba(121, 136, 151, 0.37);
 }
 
-.__application_animation_transform{
-    animation: 0.8s __application_animation_transform;
-}
-
 .__application_animation{
     animation: 1.5s application_animation;
 }
-
-.__application_animation_infinite{
-    animation: 0.5s application_animation infinite;
-}
-
-.__shake_button{
-    animation: 0.5s shake_button;
-}   
 
 ::-webkit-scrollbar {
     width: 0px;
@@ -74,12 +68,5 @@
 @keyframes __application_animation_transform {
     0%{transform: rotate(0deg);}
     50%{transform: rotate(5deg);}
-    100%{transform: rotate(0deg);}
-}
-
-@keyframes shake_button {
-    0%{transform: rotate(0deg);}
-    25%{transform: rotate(4deg);}
-    70%{transform: rotate(-5deg);}
     100%{transform: rotate(0deg);}
 }
