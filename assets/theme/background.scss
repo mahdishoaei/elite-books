@@ -1,0 +1,23 @@
+@import '../scss/global/_theme_colors';
+
+
+.app-bg-primary{
+    background: var(--primary-);
+}
+.app-bg-secondary{
+    background: var(--secondary-);
+}
+.app-bg-gray{
+    background: var(--gray-);
+}
+.app-bg-light{
+    background: var(--light-);
+}
+.app-bg-white{
+    background: var(--white-);
+}
+.app-bg-dark{
+    background: var(--dark-);
+}
+
+
