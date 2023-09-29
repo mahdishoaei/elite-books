@@ -2,6 +2,7 @@
     <v-sheet
       class="mx-auto"
       max-width="600"
+      style="background: none;"
     >
       <v-slide-group
         show-arrows
@@ -9,15 +10,15 @@
         <v-slide-group-item
           v-for="category in categories"
           :key="category.id"
-          v-slot="{ isSelected, toggle }"
         >
-          <v-btn
-            class="ma-2"
-            :color="isSelected ? 'primary' : undefined"
-            @click="toggle"
-          >
-            {{ category.name }}
-          </v-btn>
+          <CoreBtn
+            :name="category.name"
+            @click="handleSetCategory(category.name)"
+            background="outline-primary-hover"
+            width="120px"
+            borderRadius="5px" 
+            class="mx-2"
+          />
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
@@ -50,4 +51,8 @@ const categories = ref([
         name : "Romance"
     },
 ])
+
+const handleSetCategory = (categoryName) => {
+  console.log(categoryName)
+}
 </script>
