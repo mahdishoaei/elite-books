@@ -1,6 +1,10 @@
 <template>
     <button 
-    :style="{'border-radius': `${borderRadius}`, 'width': `${width}`}"
+    :style="{
+      'border-radius': `${borderRadius}`, 
+      'width': `${width}`,
+      'height': `${height}`
+    }"
     :class="{
         'app-bg-primary': background === 'primary', 
         'app-bg-secondary': background === 'secondary',
@@ -41,6 +45,11 @@
         required : false
     },
     width : {
+        type : String,
+        default : "",
+        required : false
+    },
+    height : {
         type : String,
         default : "",
         required : false

@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { successToast } from '@/utils/toasMessage'
 
 export const applicationTheme = defineStore('theme' , {
 
