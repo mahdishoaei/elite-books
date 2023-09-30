@@ -11,6 +11,10 @@
     <div class="mt-10">
       <ManagersSlider />
     </div>
+
+    <div class="mt-10">
+      <AuthorSlider />
+    </div>
 </div>
 </template>
 

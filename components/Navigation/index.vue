@@ -34,7 +34,7 @@
           /> 
           <CoreBtn 
             name="Sign Up" 
-            background="secondary"  
+            background="blue"  
             borderRadius="5px" 
             width="80px"
             height="33px"

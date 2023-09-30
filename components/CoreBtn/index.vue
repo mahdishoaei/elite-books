@@ -13,6 +13,7 @@
         'app-bg-light': background === 'light',
         'app-bg-white': background === 'white',
         'app-bg-dark': background === 'dark',
+        'app-bg-blue': background === 'blue',
         'outline-primary': background === 'outline-primary', 
         'outline-primary-hover': background === 'outline-primary-hover', 
      }">
