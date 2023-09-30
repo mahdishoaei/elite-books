@@ -1,6 +1,10 @@
 <template>
     <div
-      class="core-card"
+      class="core-card app_pointer"
+      :class="{
+        'app-bg-white': ThemeStatus === 'light',
+        'app-bg-dark': ThemeStatus === 'dark',
+      }"
       :style="{
       'width': `${width}`,
       'height': `${height}`
@@ -10,7 +14,14 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { applicationTheme } from '@/stores/applicationTheme'
+const ThemeDS = applicationTheme()
+
+const ThemeStatus = computed<string>(() => {
+    return ThemeDS.theme
+})
+
 const props = defineProps({
     width: {
         type: String,

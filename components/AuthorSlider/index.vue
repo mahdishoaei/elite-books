@@ -1,10 +1,6 @@
-
-import { AuthorCard } from '.nuxt/components';
 <template>
     <v-sheet
         style="background: none;"
-        class="mx-auto"
-        max-width="1100"
     >
         <v-slide-group
             v-model="model"

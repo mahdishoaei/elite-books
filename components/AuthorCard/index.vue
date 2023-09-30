@@ -1,17 +1,23 @@
 <template>
-    <CoreCard width="230px" height="280px">
+    <CoreCard 
+        width="230px" 
+        height="310px"
+    >
         <template #cardContent>
-           <div class="">
-              <div class="d-flex justify-center align-center px-3 py-5">
+           <div class="d-flex flex-column justify-center align-center w-100">
+
+              <div class="py-5 w-100 d-flex justify-center align-center">
                 <img 
+                    class="mx-2"
                     src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"  
-                    alt="image">
+                    alt="image"
+                >
+              </div>
+
+              <div class="d-flex flex-column justify-center align-center w-100 px-2">
                 <span class="app-font-size-14 app-font-weight-600 pt-2">
                     Ali Mazlom
                 </span>
-              </div>
-              <div class="d-flex flex-column justify-center px-2">
-              
                 <span class="app-font-size-12 app-color-primary">
                      Author of Elite Books
                 </span>
@@ -26,6 +32,7 @@
                     <BootstrapIconYoutube class="mx-2" />
                 </div>
               </div>
+
            </div>
         </template>
     </CoreCard>
@@ -53,8 +60,8 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 110px;
     border-radius: 50%;
     margin-right: 20px;
 }

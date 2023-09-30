@@ -5,10 +5,6 @@ const ThemeDS = applicationTheme()
 const ThemeStatus = computed<string>(() => {
     return ThemeDS.theme
 })
-
-const HandleChangeTheme = () => {
-    ThemeDS.changeThemeStatus()
-}
 </script>
 
 <template>
