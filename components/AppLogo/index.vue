@@ -1,9 +1,9 @@
 <template>
     <div class="d-flex">
         <img 
-            src="/app-logo.png" 
-            width="80" 
-            height="60"
+            src="/public/logo2.webp"
+            width="90" 
+            height="70"
         />
     </div>
 </template>
