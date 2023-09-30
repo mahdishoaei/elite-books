@@ -1,7 +1,10 @@
 <template>
     <div
       class="core-card"
-      :style="{'width': `${width}`}"
+      :style="{
+      'width': `${width}`,
+      'height': `${height}`
+      }"
     >
       <slot name="cardContent"></slot>
     </div>
@@ -10,6 +13,11 @@
 <script setup>
 const props = defineProps({
     width: {
+        type: String,
+        default : "",
+        required : false
+    },
+    height: {
         type: String,
         default : "",
         required : false
@@ -23,5 +31,9 @@ const props = defineProps({
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 5px 0 #fd7403;
+}
+
+.core-card:hover {
+  background: #fd740357;
 }
 </style>
