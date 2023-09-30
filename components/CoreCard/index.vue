@@ -1,6 +1,9 @@
 <template>
     <div
-      class="core-card app_pointer"
+      class="
+      core-card 
+      core-card-hover 
+      app_pointer"
       :class="{
         'app-bg-white': ThemeStatus === 'light',
         'app-bg-dark': ThemeStatus === 'dark',
@@ -44,7 +47,7 @@ const props = defineProps({
     box-shadow: 0 0 5px 0 #fd7403;
 }
 
-.core-card:hover {
+.core-card-hover:hover {
   background: #fd740357;
 }
 </style>
