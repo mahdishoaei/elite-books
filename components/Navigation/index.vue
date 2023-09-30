@@ -29,15 +29,15 @@
             name="Sign In" 
             background="primary" 
             borderRadius="5px" 
-            width="120px"
-            height="35px"
+            width="80px"
+            height="33px"
           /> 
           <CoreBtn 
             name="Sign Up" 
             background="secondary"  
             borderRadius="5px" 
-            width="120px"
-            height="35px"
+            width="80px"
+            height="33px"
           />
          </div>
       </div>
