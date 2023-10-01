@@ -18,9 +18,10 @@ const ThemeStatus = computed<string>(() => {
         <div class="nav-container">
             <Navigation />
         </div>
-         <div class="router-container">
-             <slot />
-         </div>
+        
+        <div class="router-container">
+            <slot />
+        </div>
        
         <div class="mobile-menu-container">
             <MobileMenu />
