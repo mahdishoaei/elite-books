@@ -9,6 +9,10 @@
     </div>
 
     <div class="mt-10">
+        <CaresoulSection />
+    </div>
+
+    <div class="mt-10">
       <ManagersSlider />
     </div>
 
@@ -28,3 +32,4 @@
      },3000)
   }
 </script>
+
