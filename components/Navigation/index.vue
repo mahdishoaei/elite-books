@@ -1,6 +1,10 @@
 <template>
     <div 
-     class="navigation"
+      :class="{
+        'app-bg-dark': ThemeStatus === 'dark',
+        'app-bg-light': ThemeStatus === 'light'
+      }" 
+      class="navigation"
     >
         <div 
           class="logo-container px-4 py-1"
@@ -45,7 +49,7 @@
             </span>
         </div>
         <div 
-          class="auth-container px-4"
+          class="auth-container d-flex justify-end align-center px-4"
         >
          <div 
           class="d-flex align-center"
@@ -70,9 +74,14 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useRoute } from 'vue-router'
+import { applicationTheme } from '@/stores/applicationTheme'
 
+const ThemeDS = applicationTheme()
+const ThemeStatus = computed<string>(() => {
+    return ThemeDS.theme
+})
 const Route = useRoute()
 </script>
 
@@ -93,9 +102,6 @@ const Route = useRoute()
     }
     .auth-container{
       width: 30%;
-      display: flex;
-      justify-content: end;
-      align-items: center;
     }
     @media (max-width: 800px) {
       .logo-container{

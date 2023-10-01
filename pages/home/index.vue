@@ -1,5 +1,20 @@
+<script setup lang="ts">
+import { applicationTheme } from '@/stores/applicationTheme'
+const ThemeDS = applicationTheme()
+
+const ThemeStatus = computed<string>(() => {
+    return ThemeDS.theme
+})
+</script>
+
 <template>
-  <div class="d-flex flex-column">  
+  <div
+    :class="{
+      'app-bg-dark': ThemeStatus === 'dark',
+      'app-bg-light': ThemeStatus === 'light'
+    }" 
+    class="d-flex flex-column"
+  >  
       <div class="mt-10">
         <CategoryStorySlider />
       </div>
@@ -97,7 +112,9 @@
     }
     .text-container{
       width: 100%;
-      padding: 30px 40px;
+      padding: 30px 30px;
+      justify-content: center;
+      align-items: center;
     }
    }
 }
