@@ -1,12 +1,6 @@
 <template>
-<div class="app-container">
-    <div class="d-flex">
-      
-    </div>
-    
-    <div class="mt-10">
-        <CategorySlider />
-    </div>
+<div class="d-flex flex-column">  
+    <div class="mt-10"></div>
 
     <div class="mt-10">
         <CaresoulSection />
