@@ -8,6 +8,7 @@
 
               <div class="py-5 w-100 d-flex justify-center align-center">
                 <img 
+                   :src="img"
                     class="mx-2"
                     src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"  
                     alt="image"
@@ -16,10 +17,10 @@
 
               <div class="d-flex flex-column justify-center align-center w-100 px-2">
                 <span class="app-font-size-14 app-font-weight-600 pt-2">
-                    Ali Mazlom
+                    {{ name }}
                 </span>
                 <span class="app-font-size-12 app-color-primary">
-                     Author of Elite Books
+                    {{ position }}
                 </span>
                 <span class="app-font-size-12 pt-3 app-color-gray">
                     In publishing and graphic design, Lorem ipsum is a placeholder text commonly 

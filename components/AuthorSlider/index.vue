@@ -10,15 +10,27 @@
             show-arrows
         >
             <v-slide-group-item
-                v-for="n in 10"
-                :key="n"
+                v-for="item in authorInfo"
+                :key="item.id"
             >
-                <AuthorCard class="mx-3 mt-3 mb-3" />
+                <AuthorCard 
+                :name="item.name"
+                :position="item.position" 
+                :img="item.img"                 
+                class="mx-3 mt-3 mb-3" 
+                />
             </v-slide-group-item>
         </v-slide-group>
     </v-sheet>
 </template>
 
-<script>
+<script setup>
+import { authorDS } from '@/stores/authorData'
+const author = authorDS()
+
+const authorInfo = computed(()=>{
+     return author.authors
+    
+})
 const model = ref(null)
 </script>
