@@ -2,6 +2,11 @@
 definePageMeta({
     layout: "auth",
 });
+
+const form = ref({
+    username : '',
+    password: ''
+})
 </script>
 
 <template>
@@ -22,10 +27,11 @@ definePageMeta({
         <div class="w-100">
             <CoreInput
                 label="Username"
+                v-model="form.username"
             />
         </div>
        </div>
-
+       
        <div class="d-flex mt-2 w-100">
         <div class="pt-6 px-2">
             <BootstrapIconEyeFill />
@@ -33,6 +39,7 @@ definePageMeta({
         <div class="w-100">
             <CoreInput
                 label="Password"
+                v-model="form.password"
             />
         </div>
        </div>
