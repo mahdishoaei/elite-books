@@ -1,19 +1,19 @@
-<template>
+<template >
     <CoreCard width="350px">
-        <template #cardContent>
-           <div class="d-flex">
-              <div class="d-flex justify-center align-center px-5 py-5">
+        <template  #cardContent >
+           <div  class="d-flex" >
+              <div  class="d-flex justify-center align-center px-5 py-5">
                 <img 
-                    src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"  
-                    alt="image"
-                >
+                 :src="img" 
+                  alt="img" 
+                 />
               </div>
               <div class="d-flex flex-column justify-center px-2">
                 <span class="app-font-size-14 app-font-weight-600 pt-2">
-                    Eshmit Sh
+                    {{ name }}
                 </span>
                 <span class="app-font-size-12 app-color-primary">
-                    The manager of the elite book
+                    {{ position }}
                 </span>
                 <span class="app-font-size-12 pt-3 app-color-gray">
                     In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
@@ -31,7 +31,10 @@
     </CoreCard>
 </template>
 
+
+
 <script setup>
+
 const props = defineProps({
     name: {
         type: String,
