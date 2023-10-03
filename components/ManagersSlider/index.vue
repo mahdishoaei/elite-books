@@ -9,7 +9,7 @@
             show-arrows
         >
             <v-slide-group-item
-            v-for="item in managersInfo"
+                v-for="item in managersInfo"
                :key="item.id"
             >
                 <ManagersCard 

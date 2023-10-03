@@ -13,7 +13,7 @@ const ThemeStatus = computed<string>(() => {
       'app-bg-dark': ThemeStatus === 'dark',
       'app-bg-light': ThemeStatus === 'light'
     }" 
-    class="d-flex flex-column"
+    class="d-flex flex-column __application_animation"
   >  
       <div class="mt-10">
         <CategoryStorySlider />

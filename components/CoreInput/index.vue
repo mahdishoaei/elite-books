@@ -12,7 +12,7 @@
          v-if="error"
          class="app-font-size-14 app-color-danger"
         >
-           {{ textError }}
+           {{ messageError }}
         </span>
     </div>
 </template>
@@ -34,7 +34,7 @@ const props = defineProps({
         default: false,
         required: false,
     },
-    textError: {
+    messageError: {
         type: String,
         default: "",
         required: false,

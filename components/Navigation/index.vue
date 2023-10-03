@@ -61,6 +61,7 @@
             borderRadius="5px" 
             width="80px"
             height="33px"
+            @click="signIn"
           /> 
           <CoreBtn 
             name="Sign Up" 
@@ -68,6 +69,7 @@
             borderRadius="5px" 
             width="80px"
             height="33px"
+            @click="signUp"
           />
          </div>
       </div>
@@ -75,14 +77,24 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { applicationTheme } from '@/stores/applicationTheme'
 
 const ThemeDS = applicationTheme()
 const ThemeStatus = computed<string>(() => {
     return ThemeDS.theme
 })
+
+const Router = useRouter()
 const Route = useRoute()
+
+const signIn = () => {
+  Router.push('auth/login')
+}
+
+const signUp = () => {
+  Router.push('auth/register')
+}
 </script>
 
 <style lang="scss">
