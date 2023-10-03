@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="d-flex flex-column">
         <v-text-field
             clearable
             :label="label"
@@ -8,6 +8,12 @@
             @input="$emit('update:modelValue', $event.target.value)"
             :type="type"
         ></v-text-field>
+        <span
+         v-if="error"
+         class="app-font-size-14 app-color-danger"
+        >
+           {{ textError }}
+        </span>
     </div>
 </template>
 
@@ -23,7 +29,7 @@ const props = defineProps({
         default: '',
         required: false
     },
-    hasError: {
+    error: {
         type: Boolean,
         default: false,
         required: false,

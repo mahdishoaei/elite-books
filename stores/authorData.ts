@@ -29,14 +29,14 @@ export const authorDS = defineStore('author' , {
                 id : 3,
                 img : 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Douglas_adams_portrait_cropped.jpg',
                 name : 'Douglas Adams',
-                position : 'Douglas Noël Adams was an English author, humorist, and screenwriter'
+                position : 'humorist and screenwriter'
                 
             },
             {
                 id : 4,
                 img : 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtQbGjK4ljUKQgf1ioAPNtq-Qy4UDUiXYDdqFMe2N1_ZE7kUsE',
                 name : 'Isabel Allende',
-                position : 'Isabel Angélica Allende Llona is a Chilean writer'
+                position : 'Chilean writer'
                 
             },
             {
