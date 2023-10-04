@@ -17,4 +17,12 @@ export const validPassword = (password: string) => {
     } else {
      return true
     }
- }
+}
+
+export const fristNameLastName = (param: string) => {
+    if(param.length == 0) {
+     return false
+    } else {
+     return true
+    }
+}
