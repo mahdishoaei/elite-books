@@ -18,9 +18,23 @@ export const validPassword = (password: string) => {
      return true
     }
 }
+export const validConfirmPassword = (confirmPassword: string,password: string ) => {
+    if(confirmPassword !== password) {
+     return false
+    } else {
+     return true
+    }
+}
 
-export const fristNameLastName = (param: string) => {
-    if(param.length == 0) {
+export const ValidFristName = (firstName: string) => {
+    if(firstName.length == 0) {
+     return false
+    } else {
+     return true
+    }
+}
+export const ValidLastName = (lastName: string) => {
+    if(lastName.length == 0) {
      return false
     } else {
      return true
