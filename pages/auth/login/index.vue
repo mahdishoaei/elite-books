@@ -46,9 +46,9 @@ const handleLogin = () => {
 
 <template>
     <div class="__application_animation">
-        <div class="d-flex px-2">
+        <div class="d-flex">
            <span class="app-font-size-18">
-              Login with
+              Sign in with
            </span>
            <span class="px-2 app-font-size-18 app-font-weight-600 app-color-primary">
             Elite Books
@@ -56,9 +56,6 @@ const handleLogin = () => {
         </div>
 
        <div class="d-flex mt-5 w-100">
-        <div class="pt-6 px-2">
-            <BootstrapIconPersonFill />
-        </div>
         <div class="w-100">
             <CoreInput
                 label="Username"
@@ -70,9 +67,6 @@ const handleLogin = () => {
        </div>
        
        <div class="d-flex mt-2 w-100">
-        <div class="pt-6 px-2">
-            <BootstrapIconEyeFill />
-        </div>
         <div class="w-100">
             <CoreInput
                 label="Password"
@@ -85,22 +79,23 @@ const handleLogin = () => {
 
        <div class="d-flex mt-5">
             <CoreBtn 
-                class="mx-2"
-                name="Login" 
+                name="Sign in" 
                 background="primary" 
                 borderRadius="5px" 
                 width="80px"
-                height="40px"
+                height="38px"
                 @click="handleLogin"
             /> 
-            <CoreBtn 
-                name="Create Account" 
-                background="outline-primary-hover"  
-                borderRadius="5px" 
-                width="130px"
-                height="40px"
-                @click="navigateTo('/auth/register')"
-            />
+            <div class="mx-2">
+                <CoreBtn 
+                    name="Create Account" 
+                    background="outline-primary-hover"  
+                    borderRadius="5px" 
+                    width="130px"
+                    height="38px"
+                    @click="navigateTo('/auth/register')"
+                />
+            </div>
        </div>
        
     </div>
