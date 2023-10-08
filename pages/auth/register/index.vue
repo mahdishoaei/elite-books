@@ -1,5 +1,11 @@
 <script setup>
-import { validUsername, validPassword, ValidFristName , ValidLastName ,validConfirmPassword } from '@/utils/validate'
+import { 
+    validUsername, 
+    validPassword , 
+    validFristnameLastname ,
+    validConfirmPassword 
+} 
+from '@/utils/validate'
 
 definePageMeta({
     layout: "auth",
@@ -38,19 +44,19 @@ const error = ref({
 
 const handleRegister = () => {
     let AccessToRegister = true
-    if(!ValidFristName(form.value.firstName)){
+    if(!validFristnameLastname(form.value.firstName)){
         AccessToRegister = false
         error.value.firstName.status = true
-        error.value.firstName.message = 'firstName can not be empty'
+        error.value.firstName.message = 'First name can not be empty'
     } else {
         AccessToRegister = true
         error.value.firstName.status = false
         error.value.firstName.message = ''
     }
-    if(!ValidLastName(form.value.lastName)){
+    if(!validFristnameLastname(form.value.lastName)){
         AccessToRegister = false
         error.value.lastName.status = true
-        error.value.lastName.message = 'lastName can not be empty'
+        error.value.lastName.message = 'Last name can not be empty'
     } else {
         AccessToRegister = true
         error.value.lastName.status = false
@@ -172,7 +178,7 @@ const handleRegister = () => {
        <div class="d-flex mt-5">
             <CoreBtn 
                 name="Create Account" 
-                background="outline-primary-hover"  
+                background="primary"  
                 borderRadius="5px" 
                 width="130px"
                 height="40px"

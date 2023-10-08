@@ -99,6 +99,7 @@ const handleLogin = () => {
                 borderRadius="5px" 
                 width="130px"
                 height="40px"
+                @click="navigateTo('/auth/register')"
             />
        </div>
        
