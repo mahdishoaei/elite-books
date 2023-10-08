@@ -90,7 +90,6 @@ const ThemeStatus = computed<string>(() => {
 })
 
 const Route = useRoute()
-
 </script>
 
 <style lang="scss">

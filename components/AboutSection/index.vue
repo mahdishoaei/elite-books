@@ -4,7 +4,7 @@
       >
         
         <div 
-          class="text-container d-flex flex-column align-center justify-center" 
+          class="text-container d-flex flex-column justify-center" 
         >
               
           <span 
