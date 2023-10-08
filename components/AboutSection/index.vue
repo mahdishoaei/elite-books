@@ -6,7 +6,7 @@
           class="text-container d-flex flex-column justify-center align-center" 
         >  
           <span 
-            class="app-font-size-22 app-color-primary"
+            class="app-font-size-16 app-color-primary"
           >
             Elite Books About Us 
           </span>

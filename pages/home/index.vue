@@ -50,7 +50,7 @@ const ThemeStatus = computed<string>(() => {
                >
             </div>
             <div class="text-container">
-              <span class="app-font-size-22 app-color-primary">
+              <span class="app-font-size-16 app-color-primary">
                 Elite Books Ready For You
               </span>
               <p class="app-font-size-14 app-color-gray">
