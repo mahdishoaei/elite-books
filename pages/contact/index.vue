@@ -76,7 +76,7 @@
                 background="primary" 
                 borderRadius="5px" 
                 width="80px"
-                height="40px"
+                height="32px"
             /> 
           </div>
         </div>
