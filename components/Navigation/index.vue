@@ -64,7 +64,7 @@
             background="primary" 
             borderRadius="5px" 
             width="80px"
-            height="33px"
+            height="32px"
             @click="navigateTo('/auth/login')"
           /> 
           <CoreBtn 
@@ -72,7 +72,7 @@
             background="blue"  
             borderRadius="5px" 
             width="80px"
-            height="33px"
+            height="32px"
             @click="navigateTo('/auth/register')"
           />
          </div>

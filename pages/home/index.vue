@@ -63,7 +63,7 @@ const ThemeStatus = computed<string>(() => {
                   background="primary"
                   borderRadius="5px" 
                   width="100px"
-                  height="33px"
+                  height="32px"
                 />
                 <CoreBtn 
                   class="mt-5 mx-2"
@@ -71,7 +71,7 @@ const ThemeStatus = computed<string>(() => {
                   background="outline-primary-hover"
                   borderRadius="5px" 
                   width="100px"
-                  height="33px"
+                  height="32px"
                 />
               </div>
             </div>
