@@ -3,7 +3,7 @@ export const validEmail = (email: any) => {
     return reg.test(email)
 }
 
-export const validFristnameLastname = (param: string) => {
+export const validaRequired = (param: string) => {
     if(param.length == 0) {
         return false
     } else {

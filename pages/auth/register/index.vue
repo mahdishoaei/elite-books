@@ -2,7 +2,7 @@
 import { 
     validUsername, 
     validPassword , 
-    validFristnameLastname ,
+    validaRequired ,
     validConfirmPassword 
 } 
 from '@/utils/validate'
@@ -44,7 +44,7 @@ const error = ref({
 
 const handleRegister = () => {
     let AccessToRegister = true
-    if(!validFristnameLastname(form.value.firstName)){
+    if(!validaRequired(form.value.firstName)){
         AccessToRegister = false
         error.value.firstName.status = true
         error.value.firstName.message = 'First name can not be empty'
@@ -53,7 +53,7 @@ const handleRegister = () => {
         error.value.firstName.status = false
         error.value.firstName.message = ''
     }
-    if(!validFristnameLastname(form.value.lastName)){
+    if(!validaRequired(form.value.lastName)){
         AccessToRegister = false
         error.value.lastName.status = true
         error.value.lastName.message = 'Last name can not be empty'

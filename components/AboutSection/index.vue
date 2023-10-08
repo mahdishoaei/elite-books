@@ -2,11 +2,9 @@
       <div
         class="mt-10 d-flex about-section"
       >
-        
         <div 
-          class="text-container d-flex flex-column justify-center" 
-        >
-              
+          class="text-container d-flex flex-column justify-center align-center" 
+        >  
           <span 
             class="app-font-size-22 app-color-primary"
           >
