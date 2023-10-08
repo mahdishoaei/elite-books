@@ -10,12 +10,12 @@
 }
 
 .app-container{
-    padding: 20px 60px;
+    padding: 20px 80px;
 }
 
 @media (max-width: 600px) {
     .app-container{
-        padding: 20px 10px;
+        padding: 20px 35px;
     }
 }
 
@@ -38,10 +38,6 @@
     font-weight: 600;
     padding: 0 5px;
     color: #816fe9;
-}
-
-.app_shadow{
-    box-shadow: 0 1px 2px 0 rgba(121, 136, 151, 0.37);
 }
 
 .__application_animation{
@@ -67,10 +63,4 @@
 @keyframes application_animation {
     0%{opacity: 0;}
     100%{opacity: 1;}
-}
-
-@keyframes __application_animation_transform {
-    0%{transform: rotate(0deg);}
-    50%{transform: rotate(5deg);}
-    100%{transform: rotate(0deg);}
 }

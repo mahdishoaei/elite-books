@@ -24,24 +24,28 @@
         </div>
         <div class="items-container">
             <span
+              @click="navigateToHome"
               :class="{'app_active_route': Route.path === '/home'}" 
               class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
             >
               Home
             </span>
             <span
+              @click="navigateToAbout"
               :class="{'app_active_route': Route.path === '/about'}" 
               class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
             >
               About Us
             </span>
            <span
+            @click="navigateToContact"
             :class="{'app_active_route': Route.path === '/contact'}"
             class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
           >
               Contact Us
             </span>
             <span
+              @click="navigateToProducts"
               :class="{'app_active_route': Route.path === '/products'}" 
               class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
             >
@@ -61,7 +65,7 @@
             borderRadius="5px" 
             width="80px"
             height="33px"
-            @click="signIn"
+            @click="navigateToSignIn"
           /> 
           <CoreBtn 
             name="Sign Up" 
@@ -69,7 +73,7 @@
             borderRadius="5px" 
             width="80px"
             height="33px"
-            @click="signUp"
+            @click="navigateToSignUp"
           />
          </div>
       </div>
@@ -88,12 +92,28 @@ const ThemeStatus = computed<string>(() => {
 const Router = useRouter()
 const Route = useRoute()
 
-const signIn = () => {
-  Router.push('auth/login')
+const navigateToSignIn = () => {
+  Router.push('/auth/login')
 }
 
-const signUp = () => {
-  Router.push('auth/register')
+const navigateToSignUp = () => {
+  Router.push('/auth/register')
+}
+
+const navigateToHome = () => {
+  Router.push('/home')
+}
+
+const navigateToAbout = () => {
+  Router.push('about')
+}
+
+const navigateToContact = () => {
+  Router.push('contact')
+}
+
+const navigateToProducts = () => {
+  Router.push('products')
 }
 </script>
 

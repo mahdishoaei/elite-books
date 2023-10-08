@@ -23,7 +23,7 @@ const ThemeStatus = computed<string>(() => {
           <CaresoulSection />
       </div>
 
-      <div class="mt-10 app-container">
+      <div class="mt-10">
         <div class="w-100 d-flex justify-center">
           <span class="app-font-size-16 app-font-weight-500 app-color-primary">
             All Managers In Elite Books
@@ -32,7 +32,7 @@ const ThemeStatus = computed<string>(() => {
         <ManagersSlider />
       </div>
 
-      <div class="mt-10 app-container">
+      <div class="mt-10">
         <div class="w-100 d-flex justify-center">
           <span class="app-font-size-16 app-font-weight-500 app-color-primary">
             All Author In Elite Books
@@ -100,7 +100,6 @@ const ThemeStatus = computed<string>(() => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 50px;
   }
 }
 
@@ -111,8 +110,8 @@ const ThemeStatus = computed<string>(() => {
      width: 100%;
     }
     .text-container{
+      margin: 40px 0;
       width: 100%;
-      padding: 30px 30px;
       justify-content: center;
       align-items: center;
     }

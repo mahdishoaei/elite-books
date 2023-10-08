@@ -1,25 +1,30 @@
 <template>
-    
       <div
-      class="mt-10 d-flex  app-container pa-2 container "  >
+        class="mt-10 d-flex about-section"
+      >
         
-        <div class=" about d-flex flex-column align-center h-auto px-2 ma-2  " >
+        <div 
+          class="text-container d-flex flex-column align-center justify-center" 
+        >
               
-                <span class="app-font-size-30 app-color-primary  ">
-                     About us 
-                </span>
-                <span class="app-font-size-18 pa-3 app-color-gray description ">
-                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual  In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual  In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual 
-                </span>
+          <span 
+            class="app-font-size-22 app-color-primary"
+          >
+            Elite Books About Us 
+          </span>
+          <span 
+            class="app-font-size-18 app-color-gray description"
+          >
+            In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+            used to demonstrate the visual  In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+            used to demonstrate the visual  In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+            used to demonstrate the visual 
+          </span>
         </div>
-        <div class="d-flex flex-column align-center w-50 h-auto px-2 ma-2  " >
+        
+        <div class="img-container h-auto px-2 ma-2" >
             <v-img
-            class="img-sec"
-             :width="600"
-              aspect-ratio="16/9"
+              class="img"
               cover
               src="https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2020/06/10044334/shutterstock_1718964076.jpg"
             ></v-img>
@@ -29,18 +34,31 @@
 
 
 <style scoped lang="scss">
-.container{
-    height:300px;
-    .description{
-    overflow:hidden;
+.about-section{
+    width: 100%;
+    display: flex;
+    .text-container{
+      width: 50%;
     }
-    @media (max-width: 800px) {
-      .description{
-        font-size:14px;
-      }
-      .img-sec{
-        display: none;
+    .img-container{
+      width: 50%;
+      .img{
+        width: 100;
+        height: 350px;
+        border-radius: 30px 100px 50px 200px;
       }
     }
+}
+
+@media (max-width: 900px) {
+  .about-section{
+    flex-direction: column;
+    .text-container{
+      width: 100%;
+    }
+    .img-container{
+      display: none;
+    }
+  }
 }
 </style>
