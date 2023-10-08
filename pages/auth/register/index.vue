@@ -166,7 +166,7 @@ const handleRegister = () => {
                 background="primary"  
                 borderRadius="5px" 
                 width="130px"
-                height="38px"
+                height="32px"
                 @click="handleRegister"
             />
             <div class="mx-2">
@@ -175,7 +175,7 @@ const handleRegister = () => {
                     background="outline-primary-hover"  
                     borderRadius="5px" 
                     width="80px"
-                    height="38px"
+                    height="32px"
                     @click="navigateTo('/auth/login')"
                 />
             </div>

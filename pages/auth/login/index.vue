@@ -83,7 +83,7 @@ const handleLogin = () => {
                 background="primary" 
                 borderRadius="5px" 
                 width="80px"
-                height="38px"
+                height="32px"
                 @click="handleLogin"
             /> 
             <div class="mx-2">
@@ -92,7 +92,7 @@ const handleLogin = () => {
                     background="outline-primary-hover"  
                     borderRadius="5px" 
                     width="130px"
-                    height="38px"
+                    height="32px"
                     @click="navigateTo('/auth/register')"
                 />
             </div>
