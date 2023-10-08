@@ -49,7 +49,7 @@
             </span>
             <div class="w-100">
                 <CoreInput
-                    label="Enter you name"
+                    label="Type you name"
                     v-model="form.name"
                     :error="error.name.status"
                     :messageError="error.name.message"
@@ -57,7 +57,7 @@
             </div>
             <div class="w-100">
                 <CoreInput
-                    label="Enter your email"
+                    label="Type your email"
                     v-model="form.email"
                     :error="error.email.status"
                     :messageError="error.email.message"
@@ -66,7 +66,7 @@
             <div class="w-100">
                 <v-textarea 
                     clearable 
-                    label="Label" 
+                    label="Type your message for elite books" 
                     variant="underlined"
                 ></v-textarea>
             </div>
