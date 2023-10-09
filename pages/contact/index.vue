@@ -101,7 +101,7 @@ const handleValidation = () => {
                     :messageError="error.name.message"
                 />
             </div>
-            <div class="w-100">
+            <div class="w-100 mt-2">
                 <CoreInput
                     label="Type your email"
                     v-model="form.email"
@@ -109,7 +109,7 @@ const handleValidation = () => {
                     :messageError="error.email.message"
                 />
             </div>
-            <div class="w-100">
+            <div class="w-100 mt-2">
                 <v-textarea 
                     clearable 
                     label="Type your message for elite books" 

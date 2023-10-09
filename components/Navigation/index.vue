@@ -37,11 +37,11 @@
             >
               About Us
             </span>
-           <span
-            @click="navigateTo('/contact')"
-            :class="{'app_active_route': Route.path === '/contact'}"
-            class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
-          >
+            <span
+              @click="navigateTo('/contact')"
+              :class="{'app_active_route': Route.path === '/contact'}"
+              class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
+            >
               Contact Us
             </span>
             <span
@@ -50,6 +50,13 @@
               class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
             >
               Products
+            </span>
+            <span
+              @click="navigateTo('/search')"
+              :class="{'app_active_route': Route.path === '/search'}" 
+              class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
+            >
+              Search
             </span>
         </div>
         <div 
@@ -102,13 +109,13 @@ const Route = useRoute()
       display: flex;
     }
     .items-container{
-      width: 50%;
+      width: 55%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .auth-container{
-      width: 30%;
+      width: 25%;
     }
     @media (max-width: 800px) {
       .logo-container{

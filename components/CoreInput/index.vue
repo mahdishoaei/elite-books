@@ -8,7 +8,8 @@
             :class="{
             'app-color-white': ThemeStatus === 'dark', 
             'core-input-light': ThemeStatus === 'light',
-            'core-input-dark': ThemeStatus === 'dark'
+            'core-input-dark': ThemeStatus === 'dark',
+            'core-input-error': error
             }"
             :value="modelValue"
             @input="$emit('update:modelValue', $event.target.value)"
@@ -73,5 +74,9 @@ input{
 }
 .core-input-dark{
     box-shadow: 1px 1px 1px 1px #303030;
+}
+.core-input-error{
+    border: 1px solid #f30000;
+    box-shadow: 0px 0px 0px 0px #fff;
 }
 </style>
