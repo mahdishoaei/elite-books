@@ -22,7 +22,7 @@ const error = ref({
     }
 })
 
-const handleValidation = () => {
+const handleMessage = () => {
     let AccessToLogin = true
     if(!validaRequired(form.value.name)){
         AccessToLogin = false
@@ -123,7 +123,7 @@ const handleValidation = () => {
                 borderRadius="5px" 
                 width="80px"
                 height="32px"
-                @click="handleValidation"
+                @click="handleMessage"
             /> 
           </div>
         </div>
