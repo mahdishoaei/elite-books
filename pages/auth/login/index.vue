@@ -26,7 +26,7 @@ const handleLogin = () => {
     if(!validUsername(form.value.username)){
         AccessToLogin = false
         error.value.username.status = true
-        error.value.username.message = 'Username should must be 5 charecter'
+        error.value.username.message = 'Username  must be more than 5 charecter'
     } else {
         AccessToLogin = true
         error.value.username.status = false
@@ -35,7 +35,7 @@ const handleLogin = () => {
     if(!validPassword(form.value.password)){
         AccessToLogin = false
         error.value.password.status = true
-        error.value.password.message = 'Password should must be 8 charecter'
+        error.value.password.message = 'Password  must be more than 8 charecter'
     } else {
         AccessToLogin = true
         error.value.password.status = false

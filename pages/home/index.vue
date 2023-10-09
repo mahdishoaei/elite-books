@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
+const Route = useRoute()
 import { applicationTheme } from '@/stores/applicationTheme'
 const ThemeDS = applicationTheme()
 
@@ -64,6 +66,8 @@ const ThemeStatus = computed<string>(() => {
                   borderRadius="5px" 
                   width="100px"
                   height="32px"
+                  :class="{'active_route': Route.path === '/about'}"
+                  @click="navigateTo('/about')"
                 />
                 <CoreBtn 
                   class="mt-5 mx-2"
@@ -72,13 +76,17 @@ const ThemeStatus = computed<string>(() => {
                   borderRadius="5px" 
                   width="100px"
                   height="32px"
+                  :class="{'active_route': Route.path === '/contact'}"
+                  @click="navigateTo('/contact')"
                 />
               </div>
             </div>
         </div>
       </div>
   </div>
-</template>
+</template> 
+
+
 
 <style lang="scss" scoped>
 .info-container{

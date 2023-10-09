@@ -1,3 +1,49 @@
+<script setup>
+import { validaRequired, validEmail } from '@/utils/validate'
+
+const form = ref({
+    email: '',
+    name: '',
+    message: ''
+})
+
+const error = ref({
+    email: {
+        status: false , 
+        message: ''
+    },
+    name: {
+        status: false , 
+        message: ''
+    },
+    message: {
+        status: false , 
+        message: ''
+    }
+})
+
+const handleValidation = () => {
+    let AccessToLogin = true
+    if(!validaRequired(form.value.name)){
+        AccessToLogin = false
+        error.value.name.status = true
+        error.value.name.message = 'Name  can not be empty'
+    } else {
+        AccessToLogin = true
+        error.value.name.status = false
+        error.value.name.message = ''
+    }
+    if(!validEmail(form.value.email)){
+        AccessToLogin = false
+        error.value.email.status = true
+        error.value.email.message = 'Email address is incorrect'
+    } else {
+        AccessToLogin = true
+        error.value.email.status = false
+        error.value.email.message = ''
+    }
+}
+</script>
 <template>
     <div class="app-container pt-10 __application_animation">
         <div class="contact-container">
@@ -77,34 +123,14 @@
                 borderRadius="5px" 
                 width="80px"
                 height="32px"
+                @click="handleValidation"
             /> 
           </div>
         </div>
     </div>
 </template>
 
-<script setup>
-const form = ref({
-    email: '',
-    name: '',
-    message: ''
-})
 
-const error = ref({
-    email: {
-        status: false , 
-        message: ''
-    },
-    name: {
-        status: false , 
-        message: ''
-    },
-    message: {
-        status: false , 
-        message: ''
-    }
-})
-</script>
 
 <style lang="scss" scoped>
 .contact-container{

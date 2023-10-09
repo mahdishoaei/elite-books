@@ -27,6 +27,7 @@ const Route = useRoute()
     <div 
       class="d-flex flex-column justify-center align-center px-3 py-1"
       :class="{'active_route': Route.path === '/search'}"
+      @click="navigateTo('/search')"
     >
         <v-icon>mdi-magnify</v-icon>
         <span>Search</span>
