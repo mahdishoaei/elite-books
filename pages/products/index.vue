@@ -4,7 +4,7 @@
         <CategorySlider />
     </div>
 
-    <div class="d-flex justify-center align-center" style="height: 60vh;" v-if="loading">
+    <div class="d-flex justify-center align-center" style="height: 70vh;" v-if="loading">
         <span class="app-font-size-16 app-color-primary">
            Please wait...         
          </span>
@@ -35,10 +35,10 @@ onMounted(async () => {
 })
 
 const cardDataSource = computed(()=>{
-     return productsDSModule.books
+    return productsDSModule.books
 })
 
 const loading = computed(() => {
-    return productsDSModule.loading
+    return productsDSModule.productsLoading
 })
 </script>
