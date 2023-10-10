@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
-
+import { IBooks, ISearch } from '../services/interfaces'
 export const productDS = defineStore('books' , {
 
     state: () => ({
-        books:[],
-        search: [],
+        books:[] as IBooks[],
+        search: [] as ISearch[],
         productsLoading: false,
         searchLoading: false,
         emptystatus: true,

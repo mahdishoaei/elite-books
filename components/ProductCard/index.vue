@@ -2,7 +2,7 @@
     <div class=" px-4 py-4">
         <CoreCard
           width="340px"
-          height="230px"
+          height="200px"
           >
         <template  #cardContent >
            <div  class="d-flex" >
@@ -25,7 +25,7 @@
                 <span class="app-font-size-12 app-color-gray">
                    Lorem ipsum dolor sit amet consectetur, adipisicing elite...
                 </span>
-                <div class="d-flex flex-column mt-6">
+                <div class="d-flex flex-column">
                     <div class="mt-2">
                         <CoreBtn 
                             name="Add to cart"
@@ -82,12 +82,12 @@ const props = defineProps({
     width:50%;
     img{
         width: 165px;
-        height:230px;
+        height:200px;
     }
 }
 .content-container{
     width:50%;
-    height: 230px;
+    height: 200px;
     overflow:hidden;
 }
 
