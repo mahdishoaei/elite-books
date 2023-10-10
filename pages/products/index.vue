@@ -1,9 +1,17 @@
 <template>
 <div class="app-container __application_animation">
-    <div class="mt-10 w-100" >
+    <div class="mt-5 w-100" >
         <CategorySlider />
     </div>
-    <div class="mt-10 d-flex flex-wrap  justify-center align-center">
+
+    <div class="d-flex justify-center align-center" style="height: 60vh;" v-if="loading">
+        <span class="app-font-size-16 app-color-primary">
+           Please wait...         
+         </span>
+        <CoreLoading />
+    </div>
+
+    <div class="mt-10 d-flex flex-wrap  justify-center align-center __application_animation" v-else>
         <ProductCard
             v-for="item in cardDataSource"
             :key="item.bookId"
@@ -28,5 +36,9 @@ onMounted(async () => {
 
 const cardDataSource = computed(()=>{
      return productsDSModule.books
+})
+
+const loading = computed(() => {
+    return productsDSModule.loading
 })
 </script>

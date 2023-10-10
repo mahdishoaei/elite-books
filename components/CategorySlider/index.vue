@@ -23,9 +23,22 @@
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
-  </template>
+</template>
 
 <script setup>
+import { productDS } from '@/stores/productData'
+const productsDSModule = productDS()
+const { data: response } = await useFetch('/api/products/books')
+
+const handleSetCategory = async (categoryName) => {
+  productsDSModule.books = response.value
+  if(categoryName === "All Categories") {
+    productsDSModule.books = response.value
+  } else{
+    productsDSModule.FilterByCategory(categoryName)
+  }
+}
+
 const categories = ref([
     {
         id : 0,
@@ -52,8 +65,4 @@ const categories = ref([
         name : "Romance"
     },
 ])
-
-const handleSetCategory = (categoryName) => {
-  console.log(categoryName)
-}
 </script>

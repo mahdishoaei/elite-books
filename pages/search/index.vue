@@ -2,7 +2,7 @@
     <div class="search-container">
         <div class="w-100 mt-2">
             <CoreInput
-                label="Search by product and category"
+                label="Search by product name"
                 v-model="searchValue"
             />
         </div>
