@@ -24,32 +24,39 @@
         </div>
         <div class="items-container">
             <span
-              @click="navigateToHome"
+              @click="navigateTo('/home')"
               :class="{'app_active_route': Route.path === '/home'}" 
               class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
             >
               Home
             </span>
             <span
-              @click="navigateToAbout"
+              @click="navigateTo('/about')"
               :class="{'app_active_route': Route.path === '/about'}" 
               class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
             >
               About Us
             </span>
-           <span
-            @click="navigateToContact"
-            :class="{'app_active_route': Route.path === '/contact'}"
-            class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
-          >
+            <span
+              @click="navigateTo('/contact')"
+              :class="{'app_active_route': Route.path === '/contact'}"
+              class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
+            >
               Contact Us
             </span>
             <span
-              @click="navigateToProducts"
+              @click="navigateTo('/products')"
               :class="{'app_active_route': Route.path === '/products'}" 
               class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
             >
               Products
+            </span>
+            <span
+              @click="navigateTo('/search')"
+              :class="{'app_active_route': Route.path === '/search'}" 
+              class="app_pointer app-font-size-14 app-font-weight-600 px-2 py-2"
+            >
+              Search
             </span>
         </div>
         <div 
@@ -64,16 +71,16 @@
             background="primary" 
             borderRadius="5px" 
             width="80px"
-            height="33px"
-            @click="navigateToSignIn"
+            height="32px"
+            @click="navigateTo('/auth/login')"
           /> 
           <CoreBtn 
             name="Sign Up" 
             background="blue"  
             borderRadius="5px" 
             width="80px"
-            height="33px"
-            @click="navigateToSignUp"
+            height="32px"
+            @click="navigateTo('/auth/register')"
           />
          </div>
       </div>
@@ -81,7 +88,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { applicationTheme } from '@/stores/applicationTheme'
 
 const ThemeDS = applicationTheme()
@@ -89,32 +96,7 @@ const ThemeStatus = computed<string>(() => {
     return ThemeDS.theme
 })
 
-const Router = useRouter()
 const Route = useRoute()
-
-const navigateToSignIn = () => {
-  Router.push('/auth/login')
-}
-
-const navigateToSignUp = () => {
-  Router.push('/auth/register')
-}
-
-const navigateToHome = () => {
-  Router.push('/home')
-}
-
-const navigateToAbout = () => {
-  Router.push('about')
-}
-
-const navigateToContact = () => {
-  Router.push('contact')
-}
-
-const navigateToProducts = () => {
-  Router.push('products')
-}
 </script>
 
 <style lang="scss">
@@ -127,13 +109,13 @@ const navigateToProducts = () => {
       display: flex;
     }
     .items-container{
-      width: 50%;
+      width: 55%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .auth-container{
-      width: 30%;
+      width: 25%;
     }
     @media (max-width: 800px) {
       .logo-container{

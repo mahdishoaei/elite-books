@@ -1,23 +1,30 @@
 <template>
     <div class="d-flex flex-column">
-        <v-text-field
-            clearable
-            :label="label"
-            variant="underlined"
-            :model-value="modelValue"
+        <span class="app-font-size-12">
+         {{ label }}
+        </span>
+        <input
+            class="mt-1 mb-1"
+            :class="{
+            'app-color-white': ThemeStatus === 'dark', 
+            'core-input-light': ThemeStatus === 'light',
+            'core-input-dark': ThemeStatus === 'dark',
+            'core-input-error': error
+            }"
+            :value="modelValue"
             @input="$emit('update:modelValue', $event.target.value)"
             :type="type"
-        ></v-text-field>
+        >
         <span
          v-if="error"
-         class="app-font-size-14 app-color-danger"
+         class="app-font-size-12 app-color-danger"
         >
            {{ messageError }}
         </span>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
     label: {
         type: String,
@@ -45,4 +52,31 @@ const props = defineProps({
         required: false,
     },
 })
+
+import { applicationTheme } from '@/stores/applicationTheme'
+const ThemeDS = applicationTheme()
+
+const ThemeStatus = computed<string>(() => {
+    return ThemeDS.theme
+})
 </script>
+
+<style lang="scss" scoped>
+input{
+    width: 100%;
+    height: 32px;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+}    
+.core-input-light{
+    box-shadow: 1px 1px 1px 1px #cecccc;
+}
+.core-input-dark{
+    box-shadow: 1px 1px 1px 1px #303030;
+}
+.core-input-error{
+    border: 1px solid #f30000;
+    box-shadow: 0px 0px 0px 0px #fff;
+}
+</style>

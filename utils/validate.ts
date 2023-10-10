@@ -3,6 +3,14 @@ export const validEmail = (email: any) => {
     return reg.test(email)
 }
 
+export const validaRequired = (param: string) => {
+    if(param.length == 0) {
+        return false
+    } else {
+        return true
+    }
+} 
+
 export const validUsername = (username: string) => {
    if(username.length < 5) {
     return false
@@ -20,21 +28,6 @@ export const validPassword = (password: string) => {
 }
 export const validConfirmPassword = (confirmPassword: string,password: string ) => {
     if(confirmPassword !== password) {
-     return false
-    } else {
-     return true
-    }
-}
-
-export const ValidFristName = (firstName: string) => {
-    if(firstName.length == 0) {
-     return false
-    } else {
-     return true
-    }
-}
-export const ValidLastName = (lastName: string) => {
-    if(lastName.length == 0) {
      return false
     } else {
      return true

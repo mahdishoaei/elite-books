@@ -1,5 +1,11 @@
 <script setup>
-import { validUsername, validPassword, ValidFristName , ValidLastName ,validConfirmPassword } from '@/utils/validate'
+import { 
+    validUsername, 
+    validPassword , 
+    validaRequired ,
+    validConfirmPassword 
+} 
+from '@/utils/validate'
 
 definePageMeta({
     layout: "auth",
@@ -38,19 +44,19 @@ const error = ref({
 
 const handleRegister = () => {
     let AccessToRegister = true
-    if(!ValidFristName(form.value.firstName)){
+    if(!validaRequired(form.value.firstName)){
         AccessToRegister = false
         error.value.firstName.status = true
-        error.value.firstName.message = 'firstName can not be empty'
+        error.value.firstName.message = 'First name can not be empty'
     } else {
         AccessToRegister = true
         error.value.firstName.status = false
         error.value.firstName.message = ''
     }
-    if(!ValidLastName(form.value.lastName)){
+    if(!validaRequired(form.value.lastName)){
         AccessToRegister = false
         error.value.lastName.status = true
-        error.value.lastName.message = 'lastName can not be empty'
+        error.value.lastName.message = 'Last name can not be empty'
     } else {
         AccessToRegister = true
         error.value.lastName.status = false
@@ -88,9 +94,9 @@ const handleRegister = () => {
 
 <template>
     <div class="__application_animation">
-        <div class="d-flex px-2">
+        <div class="d-flex">
            <span class="app-font-size-18">
-              Register with
+              Sign up with
            </span>
            <span class="px-2 app-font-size-18 app-font-weight-600 app-color-primary">
             Elite Books
@@ -98,9 +104,6 @@ const handleRegister = () => {
         </div>
 
        <div class="d-flex mt-5 w-100">
-        <div class="pt-6 px-2">
-            <BootstrapIconPersonFill />
-        </div>
         <div class="w-100">
             <CoreInput
                 label="First Name"
@@ -112,9 +115,6 @@ const handleRegister = () => {
        </div>
        
        <div class="d-flex mt-2 w-100">
-        <div class="pt-6 px-2">
-            <BootstrapIconPersonFill />
-        </div>
         <div class="w-100">
             <CoreInput
                 label="Last Name"
@@ -126,9 +126,6 @@ const handleRegister = () => {
        </div>
 
        <div class="d-flex mt-5 w-100">
-        <div class="pt-6 px-2">
-            <BootstrapIconPersonFill />
-        </div>
         <div class="w-100">
             <CoreInput
                 label="Username"
@@ -140,9 +137,6 @@ const handleRegister = () => {
        </div>
        
        <div class="d-flex mt-2 w-100">
-        <div class="pt-6 px-2">
-            <BootstrapIconEyeFill />
-        </div>
         <div class="w-100">
             <CoreInput
                 label="Password"
@@ -154,9 +148,6 @@ const handleRegister = () => {
        </div>
               
        <div class="d-flex mt-2 w-100">
-        <div class="pt-6 px-2">
-            <BootstrapIconEyeFill />
-        </div>
         <div class="w-100">
             <CoreInput
                 label="Confirm Password"
@@ -172,12 +163,22 @@ const handleRegister = () => {
        <div class="d-flex mt-5">
             <CoreBtn 
                 name="Create Account" 
-                background="outline-primary-hover"  
+                background="primary"  
                 borderRadius="5px" 
                 width="130px"
-                height="40px"
+                height="32px"
                 @click="handleRegister"
             />
+            <div class="mx-2">
+                <CoreBtn 
+                    name="Sign in" 
+                    background="outline-primary-hover"  
+                    borderRadius="5px" 
+                    width="80px"
+                    height="32px"
+                    @click="navigateTo('/auth/login')"
+                />
+            </div>
        </div>
        
     </div>

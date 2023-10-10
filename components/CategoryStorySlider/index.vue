@@ -42,17 +42,17 @@ const items = ref([
     {
         id : 2,
         name : "Mystery",
-        img : "https://img.freepik.com/premium-vector/mysterious-man-spotlight-businessman-with-no-identity-noir-concept-illustration_201904-603.jpg"
+        img : "https://img.freepik.com/premium-vector/mysterious-man-spotlight-businessman-with-no-identity-noir-concept-illustration_201904-603.jpg",
     },
     {
         id : 3,
         name : "Fantasy",
-        img : "https://img.freepik.com/free-vector/black-spooky-castle-flying-dragon-canyon-with-mountains-forest-cartoon-fantasy-illustration-with-medieval-palace-with-towers-creepy-beast-with-wings-rocks-pine-trees_107791-4592.jpg"
+        img : "https://img.freepik.com/free-vector/black-spooky-castle-flying-dragon-canyon-with-mountains-forest-cartoon-fantasy-illustration-with-medieval-palace-with-towers-creepy-beast-with-wings-rocks-pine-trees_107791-4592.jpg",
     },
     {
         id : 4,
         name : "Romance",
-        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPWPTCapdXLflpoVwpQ0bjZb0X2CDfLk1Z2SVjQfEWLEhAKc59xWtSN-mLAF4vO-Xtq84&usqp=CAU"
+        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPWPTCapdXLflpoVwpQ0bjZb0X2CDfLk1Z2SVjQfEWLEhAKc59xWtSN-mLAF4vO-Xtq84&usqp=CAU",
     },
     {
         id : 5,
@@ -62,22 +62,22 @@ const items = ref([
     {
         id : 6,
         name : "Coming Soon...",
-        img : "https://static.vecteezy.com/system/resources/thumbnails/001/759/760/small/physics-supplies-and-books-vector.jpg"
+        img : "https://static.vecteezy.com/system/resources/thumbnails/001/759/760/small/physics-supplies-and-books-vector.jpg",
     },
     {
         id : 7,
         name : "Coming Soon...",
-        img : "https://img.freepik.com/premium-vector/web-developer-hands-using-tablet-pc-creating-program-code-development-software-programming-concept_48369-33861.jpg"
+        img : "https://img.freepik.com/premium-vector/web-developer-hands-using-tablet-pc-creating-program-code-development-software-programming-concept_48369-33861.jpg",
     },
     {
         id : 8,
         name : "Coming Soon...",
-        img : "https://static.vecteezy.com/system/resources/previews/004/689/213/non_2x/coin-hunting-in-investment-trading-free-vector.jpg"
+        img : "https://static.vecteezy.com/system/resources/previews/004/689/213/non_2x/coin-hunting-in-investment-trading-free-vector.jpg",
     },
     {
         id : 9,
         name : "Coming Soon...",
-        img : "https://img.freepik.com/free-vector/profitable-pricing-strategy-price-formation-promo-action-clearance-shopping-idea-design-element-cheap-products-advertisement-customers-attraction_335657-1627.jpg"
+        img : "https://img.freepik.com/free-vector/profitable-pricing-strategy-price-formation-promo-action-clearance-shopping-idea-design-element-cheap-products-advertisement-customers-attraction_335657-1627.jpg",
     },
 ])
 </script>

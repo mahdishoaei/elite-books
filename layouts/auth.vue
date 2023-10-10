@@ -1,14 +1,12 @@
 <template>
     <div class="auth-layout-container">
        <div class="img-container">
-            <img 
-                src="https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2020/06/10044334/shutterstock_1718964076.jpg" 
-                alt="img"
-            >
+           <div class="glass">
+                <div class="router-container app-container d-flex flex-column justify-center app-bg-white">
+                    <slot />
+                </div>
+            </div>
        </div>
-       <div class="router-container app-container d-flex flex-column justify-center">
-            <slot />
-        </div>
     </div>
 </template>
 
@@ -19,27 +17,26 @@
     display: flex;
     overflow: hidden;
     .img-container{
-        width: 50%;
+        width: 100%;
         height: 100vh;
-        img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2020/06/10044334/shutterstock_1718964076.jpg');
+        .glass{
             width: 100%;
             height: 100vh;
-            border-radius: 0 200px 200px 0;
-        }
-    }
-    .router-container{
-        width: 50%;
-        height: 100vh;
-    }
-}
-
-@media (max-width: 900px) {
-    .auth-layout-container{
-        .img-container{
-            display: none;
-        }
-        .router-container{
-            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(54, 54, 54, 0.45);
+            backdrop-filter: blur( 8px );
+            -webkit-backdrop-filter: blur( 8px );
+            .router-container{
+                width: 360px;
+                padding: 20px 20px;
+                border-radius: 15px;
+            }
         }
     }
 }

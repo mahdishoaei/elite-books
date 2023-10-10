@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: [
     '@/assets/scss/main.scss' ,
     'vuetify/lib/styles/main.sass',

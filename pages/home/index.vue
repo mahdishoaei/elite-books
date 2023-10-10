@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
+const Route = useRoute()
 import { applicationTheme } from '@/stores/applicationTheme'
 const ThemeDS = applicationTheme()
 
@@ -50,7 +52,7 @@ const ThemeStatus = computed<string>(() => {
                >
             </div>
             <div class="text-container">
-              <span class="app-font-size-22 app-color-primary">
+              <span class="app-font-size-16 app-color-primary">
                 Elite Books Ready For You
               </span>
               <p class="app-font-size-14 app-color-gray">
@@ -63,7 +65,9 @@ const ThemeStatus = computed<string>(() => {
                   background="primary"
                   borderRadius="5px" 
                   width="100px"
-                  height="33px"
+                  height="32px"
+                  :class="{'active_route': Route.path === '/about'}"
+                  @click="navigateTo('/about')"
                 />
                 <CoreBtn 
                   class="mt-5 mx-2"
@@ -71,14 +75,18 @@ const ThemeStatus = computed<string>(() => {
                   background="outline-primary-hover"
                   borderRadius="5px" 
                   width="100px"
-                  height="33px"
+                  height="32px"
+                  :class="{'active_route': Route.path === '/contact'}"
+                  @click="navigateTo('/contact')"
                 />
               </div>
             </div>
         </div>
       </div>
   </div>
-</template>
+</template> 
+
+
 
 <style lang="scss" scoped>
 .info-container{

@@ -2,18 +2,16 @@
       <div
         class="mt-10 d-flex about-section"
       >
-        
         <div 
-          class="text-container d-flex flex-column align-center justify-center" 
-        >
-              
+          class="text-container d-flex flex-column justify-center align-center" 
+        >  
           <span 
-            class="app-font-size-22 app-color-primary"
+            class="app-font-size-16 app-color-primary"
           >
             Elite Books About Us 
           </span>
           <span 
-            class="app-font-size-18 app-color-gray description"
+            class="app-font-size-14 app-color-gray description"
           >
             In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
             used to demonstrate the visual  In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
