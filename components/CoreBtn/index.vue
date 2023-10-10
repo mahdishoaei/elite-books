@@ -22,15 +22,21 @@
         v-if="loading"  
         indeterminate
       ></v-progress-circular>
-       <span v-else>
-            {{ name }}
-       </span>
+       <div class="d-flex " v-else>
+        <v-icon v-if="icon === 'addtocart'">mdi-cart-plus</v-icon> 
+        {{ name }}
+       </div>
     </button>
 </template>
 
 <script setup>
   const props = defineProps({
     name : {
+        type : String,
+        default : "",
+        required : false
+    },
+    icon : {
         type : String,
         default : "",
         required : false

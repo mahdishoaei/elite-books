@@ -1,7 +1,7 @@
 <template>
     <v-sheet
       class="mx-auto"
-      max-width="600"
+      max-width="800"
       style="background: none;"
     >
       <v-slide-group

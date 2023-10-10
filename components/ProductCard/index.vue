@@ -6,34 +6,36 @@
           >
         <template  #cardContent >
            <div  class="d-flex" >
-              <div  class="img-sec">
-                <img 
-                  :src="img" 
+              <div class="img-container">
+                <v-img 
+                  :src="`https://bookcart.azurewebsites.net/Upload/${img}`" 
                   alt="img" 
-                 />
+                ></v-img>
               </div>
-              <div class="d-flex flex-column justify-center px-2 py-2 content-sec">
-                <span class="app-font-size-18 app-font-weight-600 ">
-                    {{ name }}
+              <div class="d-flex flex-column px-3 pt-2 content-container">
+                <span class="app-font-size-14 app-font-weight-600">
+                    {{ author }}
                 </span>
-                <span class="app-font-size-14 app-color-primary " >
+                <span class="app-font-size-14 app-color-primary py-2" >
                     {{ category }}
                 </span>
-                <span class="app-font-size-20 app-font-weight-800 ">
-                    {{ price }}
+                <span class="app-font-size-20 app-font-weight-800">
+                    $ {{ price }}.99
                 </span>
-                <span class="app-font-size-12 pt-2 app-color-gray">
-                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
-                    used to demonstrate the visual
+                <span class="app-font-size-12 app-color-gray">
+                   Lorem ipsum dolor sit amet consectetur, adipisicing elite...
                 </span>
-                <div class="pt-2 ">
-                 <CoreBtn 
-                  name="Add to cart"
-                  background="outline-primary-hover"
-                  borderRadius="5px" 
-                  width="145px"
-                  height="25px"
-                />
+                <div class="d-flex flex-column mt-6">
+                    <div class="mt-2">
+                        <CoreBtn 
+                            name="Add to cart"
+                            background="outline-primary-hover"
+                            borderRadius="5px" 
+                            width="145px"
+                            height="32px"
+                            icon="addtocart"
+                        />
+                    </div>
                 </div>
               </div>
            </div>
@@ -52,7 +54,7 @@ const props = defineProps({
         required : false
     },
     price: {
-        type: String,
+        type: Number,
         default : "",
         required : false
     },
@@ -65,21 +67,27 @@ const props = defineProps({
         type: String,
         default : "",
         required : false
+    },
+    author: {
+        type: String,
+        default : "",
+        required : false
     }
 })
 </script>
 
 
 <style lang="scss" scoped>
-.img-sec{
+.img-container{
     width:50%;
     img{
-    width: 165px;
-    height:230px;
+        width: 165px;
+        height:230px;
+    }
 }
-}
-.content-sec{
+.content-container{
     width:50%;
+    height: 230px;
     overflow:hidden;
 }
 
