@@ -15,6 +15,7 @@ const ThemeStatus = computed<string>(() => {
         }" 
         class="default-layout-container" 
     >
+        <NuxtLoadingIndicator color="#fd7403" />
         <div class="nav-container">
             <Navigation />
         </div>
