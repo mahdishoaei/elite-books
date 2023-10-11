@@ -18,7 +18,7 @@
                         <span class="app-font-size-12 app-font-weight-600 pt-1">
                             Price
                         </span>
-                        <span class="app-font-size-14 app-font-weight-900 px-2 pt-1">
+                        <span class="app-font-size-12 app-font-weight-900 px-2 pt-1">
                             $ {{ price }}.99 
                         </span>
                     </div>
@@ -26,11 +26,11 @@
                         <span class="app-font-size-12 app-font-weight-600 pt-1">
                             Total
                         </span>
-                        <span class="app-font-size-14 app-font-weight-900 px-2 pt-1">
+                        <span class="app-font-size-12 app-font-weight-900 px-2 pt-1">
                             $500.99
                         </span>
                     </div>
-                    <div class="d-flex w-100 mt-1">
+                    <div class="d-flex w-100 mt-4">
                        <div class="d-flex w-50">
                         <CoreBtn
                          name="-"
