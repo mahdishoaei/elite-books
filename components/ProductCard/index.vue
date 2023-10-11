@@ -1,11 +1,11 @@
 <template >
-    <div class=" px-4 py-4">
+    <div>
         <CoreCard
           width="340px"
           height="200px"
           >
         <template  #cardContent >
-           <div  class="d-flex" >
+           <div class="d-flex">
               <div class="img-container">
                 <v-img 
                   :src="`https://bookcart.azurewebsites.net/Upload/${img}`" 
