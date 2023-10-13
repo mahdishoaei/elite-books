@@ -8,6 +8,20 @@
                 Elite Books
             </span>
         </div>
+        <div class="d-flex mt-3">
+           <div>
+            <BootstrapIconHouseDoorFill />
+           </div>
+           <span class="app-font-size-16 app-font-weight-600 px-1" @click="navigateTo('/home')">
+               Home /
+           </span>
+           <div class="mx-1">
+            <BootstrapIconSearch />
+           </div>
+           <span class="app-font-size-16 app-font-weight-600" @click="navigateTo('/search')">
+               Search
+           </span>
+        </div>
         <div class="d-flex flex-wrap  justify-center align-center __application_animation">
             <ShoppingCart
                 class="mx-2 mt-4"
@@ -26,6 +40,11 @@
 <script setup>
 import { productDS } from '@/stores/productData'
 const { data: response } = await useFetch('/api/products/books')
+
+definePageMeta({
+    layout: "cart",
+});
+
 const productsDSModule = productDS()
 
 onMounted(async () => {

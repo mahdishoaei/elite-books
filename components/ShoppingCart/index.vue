@@ -33,25 +33,31 @@
                     <div class="d-flex w-100 mt-4">
                        <div class="d-flex w-50">
                         <CoreBtn
-                         name="-"
-                         background="blue"
-                         borderRadius="15px"
-                         width="25px"
+                            name="-"
+                            background="blue"
+                            borderRadius="5px"
+                            width="25px"
+                            height="25px"
                         />
-                        <span class="app-font-size-18 app-font-weight-900 pt-1 px-2">
+                        <span class="app-font-size-18 app-font-weight-900 px-2">
                           8
                         </span>
                         <CoreBtn
-                         name="+"
-                         background="blue"
-                         borderRadius="15px"
-                         width="25px"
+                            name="+"
+                            background="blue"
+                            borderRadius="5px"
+                            width="25px"
+                            height="25px"
                         />
                        </div>
                         <div class="d-flex justify-end w-50">
-                            <div class="app-bg-danger px-2 pt-2" style="border-radius: 15px;">
-                                <BootstrapIconTrashFill />
-                            </div>
+                            <CoreBtn
+                                background="danger"
+                                borderRadius="5px"
+                                width="25px"
+                                height="25px"
+                                icon="trash"
+                            />
                         </div>
                     </div>
                 </div>
