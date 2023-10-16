@@ -165,7 +165,7 @@ const handleRegister = () => {
                 name="Create Account" 
                 background="primary"  
                 borderRadius="5px" 
-                width="130px"
+                width="160px"
                 height="32px"
                 @click="handleRegister"
             />

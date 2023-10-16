@@ -91,7 +91,7 @@ const handleLogin = () => {
                     name="Create Account" 
                     background="outline-primary-hover"  
                     borderRadius="5px" 
-                    width="130px"
+                    width="160px"
                     height="32px"
                     @click="navigateTo('/auth/register')"
                 />
