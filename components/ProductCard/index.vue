@@ -1,11 +1,11 @@
 <template >
-    <div class=" px-4 py-4">
+    <div>
         <CoreCard
           width="340px"
           height="200px"
           >
         <template  #cardContent >
-           <div  class="d-flex" >
+           <div class="d-flex">
               <div class="img-container">
                 <v-img 
                   :src="`https://bookcart.azurewebsites.net/Upload/${img}`" 
@@ -13,20 +13,20 @@
                 ></v-img>
               </div>
               <div class="d-flex flex-column px-3 pt-2 content-container">
-                <span class="app-font-size-14 app-font-weight-600">
+                <span class="app-font-size-12 app-font-weight-600">
                     {{ author }}
                 </span>
-                <span class="app-font-size-14 app-color-primary py-2" >
+                <span class="app-font-size-12 app-color-primary py-2" >
                     {{ category }}
                 </span>
-                <span class="app-font-size-20 app-font-weight-800">
+                <span class="app-font-size-12 app-font-weight-800">
                     $ {{ price }}.99
                 </span>
                 <span class="app-font-size-12 app-color-gray">
                    Lorem ipsum dolor sit amet consectetur, adipisicing elite...
                 </span>
                 <div class="d-flex flex-column">
-                    <div class="mt-2">
+                    <div class="mt-6">
                         <CoreBtn 
                             name="Add to cart"
                             background="outline-primary-hover"

@@ -13,7 +13,9 @@
           <div 
            class="d-flex justify-center align-center px-2"
           >
-            <v-icon class="app_pointer"
+            <v-icon 
+            class="app_pointer"
+            @click="navigateTo('/cart')"
             >mdi-cart-outline</v-icon>
           </div>
           <div 

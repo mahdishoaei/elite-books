@@ -13,6 +13,7 @@
 
     <div class="mt-10 d-flex flex-wrap  justify-center align-center __application_animation" v-else>
         <ProductCard
+            class="mx-2 mt-4"
             v-for="item in cardDataSource"
             :key="item.bookId"
             :author="item.author"

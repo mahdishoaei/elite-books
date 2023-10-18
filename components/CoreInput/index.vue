@@ -7,8 +7,6 @@
             class="mt-1 mb-1"
             :class="{
             'app-color-white': ThemeStatus === 'dark', 
-            'core-input-light': ThemeStatus === 'light',
-            'core-input-dark': ThemeStatus === 'dark',
             'core-input-error': error
             }"
             :value="modelValue"
@@ -68,13 +66,8 @@ input{
     outline: none;
     border-radius: 5px;
     padding: 5px 5px;
+    background: #dfdede;
 }    
-.core-input-light{
-    box-shadow: 1px 1px 1px 1px #cecccc;
-}
-.core-input-dark{
-    box-shadow: 1px 1px 1px 1px #303030;
-}
 .core-input-error{
     border: 1px solid #f30000;
     box-shadow: 0px 0px 0px 0px #fff;

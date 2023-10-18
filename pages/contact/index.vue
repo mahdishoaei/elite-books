@@ -117,7 +117,6 @@ const handleMessage = () => {
                 ></v-textarea>
             </div>
             <CoreBtn 
-                class="mx-2"
                 name="Submit" 
                 background="primary" 
                 borderRadius="5px" 

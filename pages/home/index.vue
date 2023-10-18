@@ -26,19 +26,15 @@ const ThemeStatus = computed<string>(() => {
       </div>
 
       <div class="mt-10">
-        <div class="w-100 d-flex justify-center">
-          <span class="app-font-size-16 app-font-weight-500 app-color-primary">
-            All Managers In Elite Books
-          </span>
+        <div class="d-flex justify-center">
+          <CoreDivider name="All Manager In Elite Books" width="190px" />
         </div>
         <ManagersSlider />
       </div>
 
       <div class="mt-10">
-        <div class="w-100 d-flex justify-center">
-          <span class="app-font-size-16 app-font-weight-500 app-color-primary">
-            All Author In Elite Books
-          </span>
+        <div class="d-flex justify-center">
+          <CoreDivider name="All Author In Elite Books" width="180px" />
         </div>
         <AuthorSlider />
       </div>

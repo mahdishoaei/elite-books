@@ -23,8 +23,13 @@
         indeterminate
       ></v-progress-circular>
        <div class="d-flex " v-else>
-        <v-icon v-if="icon === 'addtocart'">mdi-cart-plus</v-icon> 
-        {{ name }}
+          <v-icon v-if="icon === 'addtocart'">mdi-cart-plus</v-icon> 
+          <BootstrapIconTrashFill v-if="icon === 'trash'" />
+          <BootstrapIconCashCoin v-if="icon === 'cash'" />
+          <BootstrapIconHeartFill v-if="icon === 'favorite'" class="mt-1 mx-2"/>
+          <span class="px-1" v-if="name">
+            {{ name }}
+          </span>           
        </div>
     </button>
 </template>
