@@ -1,5 +1,5 @@
 <template>
-<div class="app-container __application_animation">
+<div class="__application_animation py-10">
     <div class="mt-5 w-100" >
         <CategorySlider />
     </div>
