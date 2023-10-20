@@ -10,7 +10,7 @@
         <div class=" detail-container mt-10">
             <div class="img-container">
                 <img 
-                    src="https://bookcart.azurewebsites.net/Upload/9d8f4978-0ef8-42d0-873a-4eb583439237HP2.jpg" 
+                    :src="`https://bookcart.azurewebsites.net/Upload/${singleBook.coverFileName}`"  
                     alt="img" 
                 />
             </div>
@@ -18,11 +18,17 @@
             <span class="app-font-size-14 app-font-weight-600 mt-2">
                     author 
             </span>
+            <span class="app-font-size-14 app-font-weight-600 mt-2">
+                    {{ singleBook.author }} 
+            </span>
             <span class="app-font-size-14 app-color-primary py-2" >
-                    category 
+                    category    
+            </span>
+            <span class="app-font-size-14 app-font-weight-600 mt-2">
+                    {{ singleBook.category }} 
             </span>
             <span class="app-font-size-14 app-font-weight-800 py-2">
-                $  price .99
+                $  price {{ singleBook.price }}.99
             </span>
             <span class="app-font-size-14 app-color-gray py-2">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elite...
@@ -60,7 +66,22 @@
 </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useRoute } from 'vue-router'
+import { productDS } from '@/stores/productData'
+
+const productsDSModule = productDS()
+const Route = useRoute()
+
+const singleBook = computed(() => {
+    return productsDSModule.singleBook
+})
+
+onMounted(() => {
+    productsDSModule.SingleProduct(Route.params.id)
+})
+
+</script>
 
 
 <style lang="scss" scoped>

@@ -1,10 +1,13 @@
 import { defineStore } from 'pinia'
 import { IBooks, ISearch } from '../services/interfaces'
+import { singleProduct } from '@/client/api/singleProductApi'
+
 export const productDS = defineStore('books' , {
 
     state: () => ({
         books:[] as IBooks[],
         search: [] as ISearch[],
+        singleBook: {},
         productsLoading: false,
         searchLoading: false,
         emptystatus: true,
@@ -42,6 +45,10 @@ export const productDS = defineStore('books' , {
                 }
                
             }, 1500)
+        },
+       async SingleProduct(id : number){
+          const response = await singleProduct(id)
+          this.singleBook = response
         }
     }
     

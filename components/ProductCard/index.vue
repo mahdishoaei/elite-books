@@ -6,7 +6,7 @@
           >
         <template  #cardContent >
            <div class="d-flex">
-              <div class="img-container">
+              <div class="img-container" @click="navigateTo(`/products/${id}`)">
                 <v-img 
                   :src="`https://bookcart.azurewebsites.net/Upload/${img}`" 
                   alt="img" 
@@ -71,6 +71,11 @@ const props = defineProps({
     author: {
         type: String,
         default : "",
+        required : false
+    },
+    id: {
+        type: Number,
+        default : 0,
         required : false
     }
 })
