@@ -60,7 +60,9 @@
             <div class="d-flex">
                 <CoreDivider name="Similar Books" width="101px" />
             </div>
-            <SuggestSlider />
+            <SuggestSlider 
+              :dataSource="categorySuggest"
+            />
         </div>
 
 </div>
@@ -77,8 +79,13 @@ const singleBook = computed(() => {
     return productsDSModule.singleBook
 })
 
-onMounted(() => {
-    productsDSModule.SingleProduct(Route.params.id)
+const categorySuggest = computed(() => {
+    return productsDSModule.categorySuggest
+}) 
+
+onMounted(async () => {
+    await productsDSModule.SingleProduct(Route.params.id)
+    productsDSModule.FilterByCategoryForSuggest(singleBook.value.category)
 })
 
 </script>

@@ -7,6 +7,7 @@ export const productDS = defineStore('books' , {
     state: () => ({
         books:[] as IBooks[],
         search: [] as ISearch[],
+        categorySuggest: [],
         singleBook: {},
         productsLoading: false,
         searchLoading: false,
@@ -49,7 +50,15 @@ export const productDS = defineStore('books' , {
        async SingleProduct(id : number){
           const response = await singleProduct(id)
           this.singleBook = response
-        }
+        },
+        FilterByCategoryForSuggest(categoryName: string) {  
+            const proxyParser = JSON.stringify(this.books)
+            const parseToArray = JSON.parse(proxyParser)
+            const result = parseToArray.filter((book: any) => {
+                return book.category === categoryName
+            })
+            this.categorySuggest = result
+        },
     }
     
 })
