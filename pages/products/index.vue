@@ -21,6 +21,7 @@
             :price="item.price"
             :category="item.category" 
             :img="item.coverFileName"
+            :id="item.bookId"
         />
     </div>
 </div>
