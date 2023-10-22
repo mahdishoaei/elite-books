@@ -67,6 +67,7 @@ input{
     border-radius: 5px;
     padding: 5px 5px;
     background: #dfdede;
+    color: #111111;
 }    
 .core-input-error{
     border: 1px solid #f30000;

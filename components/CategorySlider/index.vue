@@ -15,7 +15,7 @@
             :name="category.name"
             @click="handleSetCategory(category.name)"
             background="outline-primary-hover"
-            width="120px"
+            width="150px"
             height="32px"
             borderRadius="5px" 
             class="mx-2"
