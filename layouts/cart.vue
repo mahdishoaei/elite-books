@@ -17,12 +17,11 @@ const ThemeStatus = computed<string>(() => {
         class="cart-layout-container" 
     >
         <NuxtLoadingIndicator color="#fd7403" />
-        <div class="router-container py-5">
-            <slot />
-        </div>
-       
         <div class="order-detail-container">
             <OrderDeatil />
+         </div>
+        <div class="router-container py-5">
+            <slot />
         </div>
     </div>
 </template>

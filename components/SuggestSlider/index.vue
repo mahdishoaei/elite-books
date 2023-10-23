@@ -3,7 +3,6 @@
         style="background: none;"
     >
         <v-slide-group
-            v-model="model"
             class="pa-4"
             selected-class="bg-success"
             show-arrows
@@ -26,16 +25,15 @@
 </template>
 
 <script setup>
-import { productDS } from '@/stores/productData'
-const { data: response } = await useFetch('/api/products/books')
-const productsDSModule = productDS()
 
-onMounted(async () => {
-    productsDSModule.books = response.value
+const props = defineProps ({
+    dataSource : {
+        type: Array,
+        default: [],
+        required: false
+    }
 })
-
 const cardDataSource = computed(()=>{
-    return productsDSModule.books
+    return props.dataSource
 })
-const model = ref(null);
 </script>

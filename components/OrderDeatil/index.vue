@@ -3,50 +3,69 @@
         class="order-detail-container d-flex flex-column"
         style="width: 1000%;"
     >
-
-        <div class="order-detail d-flex align-center">
-            <span class="app-font-size-16 app-font-weight-600">
-               Total Order Price :
+        <div>
+            <span class="app-font-size-16 app-font-weight-900">
+                Your order cart in
             </span>
-            <span class="app-font-size-16 app-font-weight-600 px-5 py-1 app-bg-white rounded mx-3">
-                $123.224.99
-            </span>
-        </div>
-
-        <div class="order-detail d-flex align-center mt-4 mb-4">
-            <span class="app-font-size-16 app-font-weight-600">
-               Total Products Order :
-            </span>
-            <span class="app-font-size-16 app-font-weight-600 px-5 py-1 app-bg-white rounded mx-3">
-                12
+            <span class="app-font-size-18 app-font-weight-900 app-color-primary">
+                Elite Books
             </span>
         </div>
-
-        <div class="order-detail d-flex align-center justify-end px-5">
-            <CoreBtn 
-                    class="mx-2"
-                    name="Payment"
-                    icon="cash"
-                    background="blue" 
-                    borderRadius="5px" 
-                    width="120px"
-                    height="30px"
-                    @click="navigateTo('/auth/login')"
-                /> 
+        <div class="d-flex mt-3">
             <div>
-                <CoreBtn 
-                    class="mx-2"
-                    name="Clear Cart" 
-                    icon="trash"
-                    background="danger" 
-                    borderRadius="5px" 
-                    width="120px"
-                    height="30px"
-                    @click="navigateTo('/auth/login')"
-                />                                      
+                <BootstrapIconHouseDoorFill />
             </div>
+            <span 
+                class="app-font-size-16 app-font-weight-600 px-1"
+                @click="navigateTo('/home')"
+            >
+                Home /
+            </span>
+            <div class="mx-1">
+                <BootstrapIconSearch />
+            </div>
+            <span 
+                class="app-font-size-16 app-font-weight-600"
+                @click="navigateTo('/search')"
+            >
+                Search
+            </span>
         </div>
-
+        <div class="d-flex mt-2">
+           <span class="app-font-size-16 app-font-weight-600 px-2 pt-1">
+              Total Order Price
+           </span>
+           <div class="rounded app-bg-white py-1 px-2 app-font-size-16 app-font-weight-900">
+              $ 16000
+           </div>
+        </div>
+        <div class="d-flex mt-2">
+            <span class="app-font-size-16 app-font-weight-600 px-2 pt-1">
+               Total Product In Order
+            </span>
+            <div class="rounded app-bg-white py-1 px-2 app-font-size-16 app-font-weight-900">
+               12
+            </div>
+         </div>
+         <div class="d-flex mt-2">
+            <CoreBtn 
+            class="mx-2"
+            name="Payment" 
+            background="primary" 
+            borderRadius="5px" 
+            width="120px"
+            height="32px"
+            icon="cash"
+          /> 
+          <CoreBtn 
+            name="Clear Cart" 
+            background="blue"  
+            borderRadius="5px" 
+            width="120px"
+            height="32px"
+            icon="trash"
+          />
+         </div>
     </div>
 </template>
 
@@ -65,16 +84,5 @@ const ThemeStatus = computed<string>(() => {
     border-radius: 15px 15px 15px 15px;
     height: 230px;
     margin: 0 20px;
-    background: rgb(132,126,245);
-    color: #fff;
-    background: linear-gradient(76deg, rgba(132,126,245,1) 0%, rgba(237,153,88,1) 48%, rgba(241,189,189,1) 100%);
-}
-
-@media (max-width: 850px) {
-    .order-detail-container{
-        border-radius: 15px 15px 0px 0px;
-        height: 140px;
-        margin: 0 0 ;
-    }
 }
 </style>

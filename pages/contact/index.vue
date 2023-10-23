@@ -110,20 +110,23 @@ const handleMessage = () => {
                 />
             </div>
             <div class="w-100 mt-2">
-                <v-textarea 
-                    clearable 
-                    label="Type your message for elite books" 
-                    variant="underlined"
-                ></v-textarea>
+                <CoreInput
+                    label="Type your message for elite book"
+                    v-model="form.email"
+                    :error="error.email.status"
+                    :messageError="error.email.message"
+                />
             </div>
-            <CoreBtn 
-                name="Submit" 
-                background="primary" 
-                borderRadius="5px" 
-                width="80px"
-                height="32px"
-                @click="handleMessage"
-            /> 
+            <div class="mt-2">
+                <CoreBtn 
+                    name="Submit" 
+                    background="primary" 
+                    borderRadius="5px" 
+                    width="80px"
+                    height="32px"
+                    @click="handleMessage"
+                /> 
+            </div>
           </div>
         </div>
     </div>

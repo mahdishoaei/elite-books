@@ -1,27 +1,5 @@
 <template>
     <div class="app-container __application_animation">
-        <div>
-            <span class="app-font-size-16 app-font-weight-900">
-                Your order cart in
-            </span>
-            <span class="app-font-size-18 app-font-weight-900 app-color-primary">
-                Elite Books
-            </span>
-        </div>
-        <div class="d-flex mt-3">
-           <div>
-            <BootstrapIconHouseDoorFill />
-           </div>
-           <span class="app-font-size-16 app-font-weight-600 px-1" @click="navigateTo('/home')">
-               Home /
-           </span>
-           <div class="mx-1">
-            <BootstrapIconSearch />
-           </div>
-           <span class="app-font-size-16 app-font-weight-600" @click="navigateTo('/search')">
-               Search
-           </span>
-        </div>
         <div class="d-flex flex-wrap  justify-center align-center __application_animation">
             <ShoppingCart
                 class="mx-2 mt-4"

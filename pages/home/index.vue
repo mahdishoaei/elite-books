@@ -70,7 +70,7 @@ const ThemeStatus = computed<string>(() => {
                   name="Contact Us"
                   background="outline-primary-hover"
                   borderRadius="5px" 
-                  width="100px"
+                  width="120px"
                   height="32px"
                   :class="{'active_route': Route.path === '/contact'}"
                   @click="navigateTo('/contact')"

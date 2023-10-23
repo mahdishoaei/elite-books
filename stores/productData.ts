@@ -1,10 +1,14 @@
 import { defineStore } from 'pinia'
 import { IBooks, ISearch } from '../services/interfaces'
+import { singleProduct } from '@/client/api/singleProductApi'
+
 export const productDS = defineStore('books' , {
 
     state: () => ({
         books:[] as IBooks[],
         search: [] as ISearch[],
+        categorySuggest: [],
+        singleBook: {},
         productsLoading: false,
         searchLoading: false,
         emptystatus: true,
@@ -42,7 +46,19 @@ export const productDS = defineStore('books' , {
                 }
                
             }, 1500)
-        }
+        },
+       async SingleProduct(id : number){
+          const response = await singleProduct(id)
+          this.singleBook = response
+        },
+        FilterByCategoryForSuggest(categoryName: string) {  
+            const proxyParser = JSON.stringify(this.books)
+            const parseToArray = JSON.parse(proxyParser)
+            const result = parseToArray.filter((book: any) => {
+                return book.category === categoryName
+            })
+            this.categorySuggest = result
+        },
     }
     
 })

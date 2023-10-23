@@ -53,11 +53,11 @@ const ThemeStatus = computed<string>(() => {
 @media (max-width: 800px) {
    .default-layout-container{
       .router-container{
-        height: 78vh;
+        height: 74vh;
       }
       .mobile-menu-container{
         display: flex;
-        height: 10vh;
+        height: 14vh;
       }
    }
 }
