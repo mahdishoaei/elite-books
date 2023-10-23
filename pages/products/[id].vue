@@ -38,7 +38,7 @@
                         name="Add to cart"
                         background="outline-primary-hover"
                         borderRadius="5px" 
-                        width="130px"
+                        width="125px"
                         height="32px"
                         icon="addtocart"
                     />
@@ -47,7 +47,7 @@
                             name="Favorite"
                             background="outline-primary"
                             borderRadius="5px" 
-                            width="130px"
+                            width="100px"
                             height="32px"
                             icon="favorite"
                         />
