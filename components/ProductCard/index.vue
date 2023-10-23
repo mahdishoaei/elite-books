@@ -12,20 +12,27 @@
                   alt="img" 
                 ></v-img>
               </div>
-              <div class="d-flex flex-column px-3 pt-2 content-container">
-                <span class="app-font-size-12 app-font-weight-600">
-                    {{ author }}
-                </span>
-                <span class="app-font-size-12 app-color-primary py-2" >
-                    {{ category }}
-                </span>
-                <span class="app-font-size-12 app-font-weight-800">
-                    $ {{ price }}.99
-                </span>
-                <span class="app-font-size-12 app-color-gray">
-                   Lorem ipsum dolor sit amet consectetur, adipisicing elite...
-                </span>
-                <div class="d-flex flex-column">
+
+              <div class=" px-3 pt-2 content-container">
+                <div
+                    class="d-flex flex-column" 
+                    @click="navigateTo(`/products/${id}`)">
+                    <span class="app-font-size-12 app-font-weight-600">
+                        {{ author }}
+                    </span>
+                    <span class="app-font-size-12 app-color-primary py-2">
+                        {{ category }}
+                    </span>
+                    <span class="app-font-size-12 app-font-weight-800">
+                        $ {{ price }}.99
+                    </span>
+                    <span class="app-font-size-12 app-color-gray">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elite...
+                    </span>
+                </div>
+
+                <div class="d-flex flex-column"
+                >
                     <div class="mt-6">
                         <CoreBtn 
                             name="Add to cart"
