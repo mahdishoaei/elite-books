@@ -17,6 +17,7 @@
                         v-bind="props"
                         :src="item.img"
                         alt="img"
+                        @click="navigateTo(`/products/category/${item.name}`)"
                     />
                 </template>
               </v-tooltip>

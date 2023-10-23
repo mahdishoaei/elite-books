@@ -71,6 +71,8 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import { productDS } from '@/stores/productData'
+const { data: response } = await useFetch('/api/products/books')
+
 
 const productsDSModule = productDS()
 const Route = useRoute()
@@ -84,6 +86,7 @@ const categorySuggest = computed(() => {
 }) 
 
 onMounted(async () => {
+    productsDSModule.books = response.value
     await productsDSModule.SingleProduct(Route.params.id)
     productsDSModule.FilterByCategoryForSuggest(singleBook.value.category)
 })
